@@ -1,0 +1,134 @@
+@import ../styles/global
+.header
+    width: 100%
+    position: fixed
+    top: 0
+    background: transparent
+    z-index: 3
+    transition: all 0.5s ease
+    .header-items
+        position: relative
+        height: 80px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid map-get($main, "gray-50")
+        .burger-btn-container
+            display: none
+            @media screen and (max-width: 865px)
+                display: block
+                width: 30px
+                z-index: 2
+            .burger-btn
+                width: 22px
+                height: 24px
+                position: relative
+                &::before, &::after, span
+                    transition: all 0.3s ease 0s
+                    content: ""
+                    height: 2px
+                    background-color: map-get($main, "gray-200")
+                    position: absolute
+                    left: 0
+                    border-radius: 2px
+                    width: 100%
+                &::before
+                    top: 5px
+                span
+                    top: 50%
+                    transform: translateY(-2px)
+                &::after
+                    bottom: 6px
+            .burger-btn.active
+                &:before, &::after
+                    width: 25px
+                &:before
+                    right: 3px
+                    top: 2px
+                    transform: rotate(-45deg)
+                    transform-origin: bottom right
+                &::after
+                    right: 3px
+                    bottom: 1px
+                    transform: rotate(45deg)
+                    transform-origin: top right
+                span
+                    opacity: 0
+        .header-item
+            display: flex
+            flex-direction: row
+            align-items: center
+            column-gap: 40px
+            .header-logo
+                display: flex
+                align-items: flex-end
+                flex-direction: row
+                column-gap: 13px
+                text-decoration: none
+                z-index: 2
+                .main-logo
+                    .icon-main-logo
+                        font-size: 41px
+                        color: map-get($main, "primary")
+                .logo-text
+                    display: flex
+                    flex-direction: column
+                    row-gap: 1px
+                    .icon-logo-heading
+                        color: map-get($main, "gray-100")
+                    .icon-logo-text
+                        font-size: 9.5px
+                        color: map-get($main, "gray-100")
+            @media screen and (max-width: 865px)
+                position: absolute
+            .nav
+                margin: 0 auto
+                @media screen and (max-width: 865px)
+                    display: none
+                .nav-box
+                    @media screen and (max-width: 865px)
+                        display: flex
+                        flex-direction: column
+                        row-gap: 16px
+                        align-items: center
+                        margin-top: 100px
+                .nav-link
+                    +typography(map-get($basic, "black"),16px, 400)
+                    text-decoration: none
+                    display: inline-block
+                    position: relative
+                    transition: 0.25s ease-out
+                    &:hover
+                        color: map-get($main, "primary")
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 100%
+                        transform: scaleX(0)
+                        height: 2px
+                        bottom: 0
+                        left: 0
+                        background-color: map-get($main, "primary")
+                        transform-origin: bottom right
+                        transition: transform 0.25s ease-out
+                    &:hover
+                        &::after
+                            transform: scaleX(1)
+                            transform-origin: bottom left
+                .nav-link:not(:last-child)
+                    margin-right: 40px
+                    @media screen and (max-width: 865px)
+                        margin-right: 0
+            .active-menu
+                @media screen and (max-width: 865px)
+                    position: fixed
+                    display: block
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background: map-get($background, "mobile-menu")
+                    padding: 70px 0 0 0
+                    z-index: 1
+.scrolled
+    background: map-get($basic, 'white')

@@ -1,0 +1,32 @@
+@import "../../styles/global"
+
+.team-slider-item 
+    display: flex
+    align-items: center
+    width: 100%
+    .slider-image 
+        overflow: hidden
+        max-width: 250px
+        .image 
+            border-radius: 3px 3px 0 0
+    .content-name 
+        text-align: start
+        .name 
+            font-family: 'Onest', sans-serif
+            font-weight: 500
+            font-size: 16px
+            color: map-get($basic, "black")
+    .content-list 
+        .list 
+            padding: 0
+            width: 80%
+            .list-item 
+                line-height: 160%
+                list-style: none
+                text-align: start
+                @include typography(map-get($basic, "black"), 16px, 400)
+                &::before 
+                    content: '\2022'
+                    color: map-get($main, 'primary')
+                    display: inline-block
+                    margin-right: 1em

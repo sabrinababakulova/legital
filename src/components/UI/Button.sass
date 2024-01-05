@@ -1,0 +1,26 @@
+@import ../../styles/global
+.btn
+    border: none
+    border-radius: 3px
+    text-align: center
+    padding: 12px 16px
+    border: 1px solid map-get($main, "primary")
+    background: map-get($main, 'primary')
+    cursor: pointer
+    transition:  0.25s ease-out
+    +typography(map-get($basic, "white"), 16px, 400)
+    &:hover
+        background: transparent
+        color: map-get($main, "primary")
+.outline
+    background: transparent
+    color: map-get($main, "primary")
+    &:hover
+        background: map-get($main, 'primary')
+        color: map-get($basic, "white")
+.sm
+    width: 104px
+.md
+    width: 165px
+.w-full
+    width: 100%

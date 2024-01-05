@@ -1,0 +1,47 @@
+@import ../styles/global
+.consultation
+    background-image: url("../assets/images/services.webp")
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 115px 0 70px
+    .consultation-box
+        position: relative
+        width: 100%
+        padding: 49px 46px
+        border: 1px solid map-get($main,'gray-50')
+        border-radius: map-get($border, 'r-3')
+        background: map-get($basic, 'white')
+        .consultation-content
+            max-width: 311px
+            width: 100%
+            display: flex
+            flex-direction: column
+            row-gap: 27px
+            .consultation-heading
+                .heading
+                    font-family: 'Onest', sans-serif
+                    font-weight: 500
+                    font-size: 24px
+                    color: map-get($basic, "black")
+            .consultstion-question
+                margin-top: 8px
+                padding: 9px 27px
+                border: 1px solid map-get($main, 'primary')
+                border-radius: map-get($border, 'r-3')
+                .question
+                    line-height: 160%
+                    font-size: 16px
+                    text-align: center
+            .consultation-text
+                .text
+                    line-height: 160%
+                    +typography(map-get($main, 'gray-100'), 16px, 400)
+    .form-box
+        position: absolute
+        top: -71px
+        right: 68px
+        width: 530px
+        height: 100%
+        background: map-get($basic, 'white')
+        border: 1px solid map-get($main, 'gray-50')
+        border-radius: map-get($border, r-3)

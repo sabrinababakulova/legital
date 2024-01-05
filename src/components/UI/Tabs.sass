@@ -1,0 +1,86 @@
+@import ../../styles/global
+.tabs
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    column-gap: 20px
+    .tab-buttons
+        display: flex
+        flex-direction: column
+        row-gap: 8px
+        max-width: 425px
+        width: 100%
+        .tab-block
+            display: flex
+            align-items: center
+            justify-content: space-between
+            border-radius: 3px
+            border: 1px solid var(--Gray, #ABABAB)
+            background: rgba(255, 255, 255, 0.80)
+            cursor: pointer
+            padding: 20px 20px 20px 49px
+            position: relative
+            transition: all 0.3s ease-in
+            &:hover
+                background: map-get($main, "gray")
+            .tab-numbers
+                position: absolute
+                left: -17px
+                width: 34px
+                height: 34px
+                display: flex
+                align-items: center
+                background: map-get($basic, "white")
+                border-radius: map-get($border, "r-50")
+                border: 1px solid map-get($main, "gray-50")
+                .numbers
+                    +typography(map-get($main, "primary"), 17px, 600)
+                    margin: auto
+            .tab-heading
+                .heading
+                    +typography(map-get($basic, "black"), 17px, 600)
+            .tab-icon
+                transform: rotate(0)
+                transition: all 0.5s ease
+                .icon
+                    display: block
+                    width: 3px
+                    height: 8px
+                    position: relative
+                    &::before,
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 1px
+                        height: 100%
+                        background: map-get($main, 'primary')
+                    &::before
+                        transform: rotate(45deg)
+                        top: 3px
+                    &::after
+                        transform: rotate(-45deg)
+                        bottom: 3px
+        .tab-title--active
+            .tab-icon
+                transform: rotate(180deg)
+                        
+    .tab-content
+        border-radius: 3px
+        border: 1px solid var(--Gray, #ABABAB)
+        background: rgba(255, 255, 255, 0.80)
+        .content-box
+            padding: 50px
+            .box-icon
+                .icon-contract
+                    font-size: 30px
+                    color: map-get($main, "primary")
+            .box-item
+                .box-title
+                    margin: 17px 0
+                    .title
+                        +typography(map-get($basic, "black"), 17px, 600)
+            .content-items
+                margin-top: 17px
+                .list
+                    margin: 5px 0
+                    padding: 0 20px

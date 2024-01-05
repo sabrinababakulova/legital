@@ -1,0 +1,22 @@
+@import ../styles/global
+.services
+    background-image: url("../assets/images/services.webp")
+    background-repeat: no-repeat
+    background-size: cover
+    .services-box
+        padding: 90px 0
+        .services-block
+            padding: 20px 0
+            .services-text
+                max-width: 300px
+                width: 100%
+                position: relative
+                padding-left: 15px
+                margin-top: 6px
+                &::before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    width: 3px
+                    height: 100%
+                    background: map-get($main, "primary")

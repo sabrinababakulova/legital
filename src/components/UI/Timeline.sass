@@ -1,0 +1,75 @@
+@import ../../styles/global
+.timeline
+    position: relative
+    display: flex
+    justify-content: space-between
+    margin-top: 40px
+    &::after
+        content: ''
+        position: absolute
+        height: 1px
+        background: map-get($main, 'primary')
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        animation: moveline 6s linear forwards
+    .timeline-content
+        position: relative
+        animation: movedown 2s linear forwards
+        opacity: 0
+        margin-bottom: 30px
+        &:nth-child(1)
+            animation-delay: 0s
+        &:nth-child(2)
+            animation-delay: 1s
+        &:nth-child(3)
+            animation-delay: 2s
+        &:nth-child(4)
+            animation-delay: 3s
+        .text-box
+            padding: 20px 30px
+            position: relative
+            border-radius: 6px
+            font-size: 15px
+            text-align: center
+            display: flex
+            flex-direction: column
+            align-items: center
+            .heading,
+            .text
+                width: 50%
+                +typography(map-get($basic, "white"), 17px, 600)
+            .heading
+                color: map-get($main, 'primary')
+                margin-bottom: 16px
+        .icon
+            content: ''
+            position: absolute
+            width: 32px
+            height: 32px
+            bottom: -45px
+            left: 0
+            right: 0
+            margin: auto
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 1px solid map-get($main, 'primary')
+            border-radius: map-get($border, "r-50")
+            z-index: 2
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+            &::before
+                width: 15px
+                height: 15px
+                border: 4px solid rgba(215, 179, 105, 0.31)
+                border-radius: map-get($border, 'r-50')
+            &::after
+                width: 10px
+                height: 10px
+                border-radius: map-get($border,'r-50' )
+                background: map-get($main, 'primary')
+                

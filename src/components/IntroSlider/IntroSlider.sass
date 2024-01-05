@@ -1,0 +1,30 @@
+@import ../../styles/global
+.swiper 
+  width: 100%
+  height: 200px
+.swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets
+    left: 95px
+    height: 80px !important
+    .swiper-pagination-bullet-active 
+        height: 13px
+        border-radius: 4px
+        width: 7px
+        background: map-get($main, "primary")
+
+.swiper-slide 
+  text-align: center
+  font-size: 18px
+  background: transparent
+
+  /* Center slide text vertically */
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+.swiper-slide img 
+  display: block
+  width: 100%
+  height: 100%
+  object-fit: cover
+

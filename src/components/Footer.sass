@@ -1,0 +1,101 @@
+@import ../styles/global
+.footer
+    position: relative
+    z-index: 1
+    background: map-get($basic, 'white')
+    .footer-box
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding: 90px 0 50px 0
+        
+        .footer-left-side
+            display: flex
+            flex-direction: column
+            row-gap: 15px
+            .footer-logo
+                .logo
+                    display: flex
+                    align-items: flex-end
+                    column-gap: 12px
+                    text-decoration: none
+                    cursor: pointer
+                    .main-logo
+                        .icon-main-logo
+                            font-size: 36px
+                            color: map-get($main, 'primary')
+                    .logo-text
+                        display: flex
+                        flex-direction: column
+                        row-gap: 1px
+                        .icon-logo-heading,
+                        .icon-logo-text
+                            color: map-get($main, "gray-100")
+                        .icon-logo-heading
+                            font-size: 17px
+                        .icon-logo-text
+                            font-size: 10px
+            .footer-text
+                width: 50%
+                .text
+                    +typography(map-get($main, "gray-100"), 17px, 400)
+            .icons-group
+                display: flex
+                column-gap: 12px
+                .icon
+                    text-decoration: none
+                    cursor: pointer
+                    i
+                        font-size: 27px
+                        color: map-get($main, 'gray-100')
+                        transition:  all 0.5s ease
+                        &:hover
+                            color: map-get($main, 'primary')
+        .footer-right-side
+            display: flex
+            .footer-connect,
+            .footer-navigation
+                display: flex
+                flex-direction: column
+                row-gap: 10px
+            .footer-navigation
+                .nav-box
+                    display: flex
+                    flex-direction: column
+                    .nav-link
+                        +typography(map-get($basic, "black"),17px, 400)
+                        text-decoration: none
+                        display: inline-block
+                        position: relative
+                        transition: 0.25s ease-out
+                        &:hover
+                            color: map-get($main, "primary")
+                        &::after
+                            content: ''
+                            position: absolute
+                            width: 100%
+                            transform: scaleX(0)
+                            height: 2px
+                            bottom: 0
+                            left: 0
+                            background-color: map-get($main, "primary")
+                            transform-origin: bottom right
+                            transition: transform 0.25s ease-out
+                        &:hover
+                            &::after
+                                transform: scaleX(1)
+                                transform-origin: bottom left
+            .footer-connect
+                margin-right: 60px
+                .connect-text
+                    .text-box
+                        display: flex
+                        column-gap: 10px
+                        .title,
+                        .text
+                            +typography(map-get($main, 'gray-100'), 17px, 400)
+                .phone-box
+                    margin-top: 14px
+                    .phone
+                        text-decoration: none
+                        +typography(map-get($main, 'gray-100'), 17px, 700)

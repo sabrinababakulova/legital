@@ -1,0 +1,50 @@
+@import ../../styles/global
+.reviews-slider
+    .swiper
+        height: 300px
+    .slider-header
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 50px 0
+        z-index: 2
+        .header-block
+            display: flex
+            column-gap: 20px
+            .header-box
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                .total-number
+                    .total
+                        +typography(map-get($basic, 'white'), 48px, 400)
+                .total-reviews
+                    .text
+                        +typography(map-get($basic, 'white'), 11px, 400)
+                .box-title
+                    width: 50%
+                .box-stars
+                    i
+                        color: map-get($star, 'yellow')
+        .button-group
+            display: flex
+            column-gap: 12px
+            .arrow-left
+                transform: rotate(180deg)
+            .arrow-left,
+            .arrow-right
+                width: 39px
+                height: 39px
+                border: 1px solid map-get($main, 'primary')
+                border-radius: map-get($border, 'r-50')
+                background: transparent
+                transition: all 0.5s ease
+                cursor: pointer
+                i
+                    color: map-get($main, 'primary')
+                &:hover
+                    background: map-get($main, 'primary')
+                    i
+                        color: map-get($basic, 'white')
+    

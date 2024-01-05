@@ -1,0 +1,33 @@
+@import ../styles/global
+.intro
+    padding: 170px 0 60px 0
+    background-image: url("../assets/images/IntroBg.webp")
+    background-repeat: no-repeat
+    background-size: cover 
+    .intro-box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 60px
+        .box-item-image
+            display: flex
+            column-gap: 20px
+        .box-item
+            display: flex
+            flex-direction: column
+            align-items: center
+            row-gap: 25px
+            .icon
+                border: 1px solid map-get($basic, 'black')
+                width: 33px
+                height: 58px
+                display: flex
+                border-radius: 25px
+                text-decoration: none
+                .icon-arrow-down
+                    display: flex
+                    justify-content: center
+                    text-decoration: none
+                    margin: auto
+                    color: map-get($basic, 'black')
+                    animation: icon-move 1s linear 0s infinite 

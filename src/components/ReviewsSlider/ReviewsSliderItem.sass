@@ -1,0 +1,18 @@
+@import ../../styles/global
+.reviews-slider-item
+    border-radius: map-get($border, 'r-3')
+    border: 1px solid map-get($main, 'gray')
+    background: map-get($background, 'black-bg')
+    padding: 30px
+    .reviews-slider-item-content
+        text-align: start
+        margin-bottom: 36px
+        .item-text
+            margin-top: 8px
+            .text
+                +typography(map-get($main, 'gray-50'), 17px, 600)
+    .item-name
+        text-align: right
+        .name
+            +typography(map-get($main, 'gray-50'), 17px, 600)
+    

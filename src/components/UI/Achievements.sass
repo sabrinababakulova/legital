@@ -1,0 +1,48 @@
+@import ../../styles/global
+.achievements
+    position: relative
+    width: 157px
+    height: 78px
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    &::before
+        content: ''
+        position: absolute
+        width: 300px
+        height: 300px
+        background: radial-gradient((44.04% 44.04% at 50.07% 45.25%, rgba(215, 179, 105, 0.29) 0%, rgba(215, 179, 105, 0.00) 100%), transparent, transparent)
+        animation: animate 2s linear infinite
+    &::after
+        content: ''
+        position: absolute
+        inset: 2px
+        background: #181818
+    @keyframes animate
+        0%
+            transform: translate(-150px, -150px)
+        25%
+            transform: translate(0, -150px)
+        50%
+            transform: translate(0, 0)
+        75%
+            transform: translate(-150px, 0)
+        100%
+            transform: translate(-150px, -150px)
+    .achievements-box
+        position: relative
+        z-index: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+        row-gap: 5px
+        .box-heading
+            .heading
+                font-family: 'Onest', sans-serif
+                font-size: 24px
+                font-weight: 500
+        .box-text
+            .text
+                +typography(map-get($basic, "white"), 13px, 400)
+            

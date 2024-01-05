@@ -1,0 +1,80 @@
+@import theme
+@import mixins
+@import fonts
+*
+    font-family: 'Nunito Sans', sans-serif
+*,
+::before,
+::after
+  box-sizing: border-box
+html, body
+  margin: 0
+  padding: 0
+  background-color: map-get($basic, "white")
+  color: map-get($basic, "black")
+html
+    overflow-x: hidden
+body
+    overflow: hidden
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin: 0
+#mapDiv
+    filter: grayscale(100) invert(100%)
+
+.container 
+   max-width: 1400px
+   margin: 0 auto
+   padding: 0 100px
+   @media screen and (max-width: 1250px)
+    padding: 0 50px
+   @media screen and (max-width: 420px)
+    padding:  0 20px
+
+.heading-light
+    +typography( map-get($basic, "white"), 24px, 500)
+.heading-dark
+    +typography(map-get($basic, "black"), 24px, 500)
+.sub-heading-white
+    line-height: 160%
+    +typography(map-get($basic, "white"), 16px, 400)
+.sub-heading-back
+    +typography(map-get($basic, "black"), 16px, 400)
+.text-primary
+    color: map-get($main, "primary")
+    
+@keyframes icon-move
+    0%
+        transform:  translate(0, 0)
+    50%   
+        transform:  translate(0, 30%)
+    100%
+        transform:  translate(0, 0)
+@keyframes rotate 
+    100% 
+        transform: rotate(1turn)
+@keyframes opacityChange 
+        50% 
+            opacity: .5
+        
+        100% 
+            opacity: 1
+@keyframes moveline
+    0%
+        width: 0
+    100%
+        width: 77%
+@keyframes movedown
+    0%
+        opacity: 1
+        transform: translateX(-30px)
+    100%
+        opacity: 1
+        transform: translateX(0px)
+        
+        

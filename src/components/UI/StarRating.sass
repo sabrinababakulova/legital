@@ -1,0 +1,11 @@
+@import ../../styles/global
+
+.star-item
+    margin-bottom: 19px
+    .input-star
+        display: none
+    .icon-star-full
+        cursor: pointer
+    .active
+        &::before
+            color: map-get($star, 'yellow')

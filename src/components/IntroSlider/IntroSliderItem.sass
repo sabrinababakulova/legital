@@ -1,0 +1,31 @@
+@import ../../styles/global
+.intro-slider-item
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin: 0 20px
+    padding: 20px 0
+    .item-heading
+        text-align: start
+        max-width: 402px 
+        width: 100%
+        .heading
+            font-family: 'Onest', sans-serif
+            font-weight: 500
+            font-size: 50px
+            color: map-get($basic, "black")
+    .item-box
+        display: flex
+        flex-direction: column
+        row-gap: 26px
+        .box-text
+            text-align: start
+            max-width: 323px
+            width: 100%
+            .text
+                line-height: 160%
+                +typography(map-get($basic, "black"), 16px, 400)
+        .box-buttons
+            display: flex
+            flex-direction: row
+            column-gap: 13px
