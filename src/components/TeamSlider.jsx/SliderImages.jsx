@@ -1,17 +1,20 @@
 import React, { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import  firstSlideImg from '../../assets/images/trader-first.webp'
+import  secondSlideImg from '../../assets/images/trader-second.webp'
+import  thirdSlideImg from '../../assets/images/trader-third.webp'
 import './SliderImages.sass'
 import 'swiper/css'
 
 const SliderImages = ({ activeSlideIndex, onSlideChange }) => {
   const swiperRef = useRef(null)
   const slides = [
-    'https://forumavatars.ru/img/avatars/0007/5b/f1/6909-1612969935.jpg',
-    'https://pic.rutubelist.ru/video/f9/71/f97160a78dcc7b0d7650ada0730ff92c.jpg?width=750',
-    'https://i.ytimg.com/vi/7asUzwYo98Q/hqdefault.jpg',
-    'Слайд 1',
-    'Слайд 2',
-    'Слайд 3',
+    firstSlideImg,
+    secondSlideImg,
+    thirdSlideImg,
+    firstSlideImg,
+    secondSlideImg,
+    thirdSlideImg,
   ]
 
   const onSwiperInit = (swiper) => {
@@ -32,13 +35,14 @@ const SliderImages = ({ activeSlideIndex, onSlideChange }) => {
       <Swiper
         onSwiper={onSwiperInit}
         onSlideChange={onSlideChange}
-        spaceBetween={30}
+        spaceBetween={13}
         slidesPerView={3}
+        loop= {true}
         initialSlide={activeSlideIndex}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <img className='image' src={slide} alt="мяу" />
+            <div className="image" style={{ backgroundImage: `url(${slide})` }}></div>
           </SwiperSlide>
         ))}
       </Swiper>

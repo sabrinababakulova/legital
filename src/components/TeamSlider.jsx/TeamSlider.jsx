@@ -1,11 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-
-import './TeamSlider.sass'
 import TeamSliderItem from './TeamSliderItem'
 import { useEffect, useRef } from 'react'
+import 'swiper/css/navigation'
+import './TeamSlider.sass'
+import 'swiper/css'
 
 const TeamSlider = ({ onSlideChange, activeSlideIndex }) => {
   const swiperRef = useRef(null)
@@ -33,13 +31,13 @@ const TeamSlider = ({ onSlideChange, activeSlideIndex }) => {
         onSwiper={onSwiperInit}
       >
         <SwiperSlide>
-          <TeamSliderItem name="Мамадалиев Умид Юлдашевич" />
+          <TeamSliderItem name="Мамадалиев Умид Юлдашевич 1" />
         </SwiperSlide>
         <SwiperSlide>
-          <TeamSliderItem name="Мамаsdfsdfдалиев Умид dfsdffsdfsdf" />
+          <TeamSliderItem name="Мамаsdfsdfдалиев Умид dfsdffsdfsdf 2" />
         </SwiperSlide>
         <SwiperSlide>
-          <TeamSliderItem name="dsff Умид sdfsdfsdfsdf" />
+          <TeamSliderItem name="dsff Умид sdfsdfsdfsdf 3" />
         </SwiperSlide>
       </Swiper>
     </div>

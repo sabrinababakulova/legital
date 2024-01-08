@@ -35,11 +35,11 @@ const ReviewsSlider = () => {
             </div>
           </div>
           <div className="button-group">
-            <button className="arrow-left arrow">
-              <i className="icon-arrow-right"></i>
+            <button className="arrow-right">
+              <div className='icon-right'><i className="icon-arrow-right"></i></div>
             </button>
-            <button className="arrow-right arrow">
-              <i className="icon-arrow-right"></i>
+            <button className="arrow-left">
+              <div className='icon-left'><i className="icon-arrow-right"></i></div>
             </button>
           </div>
         </div>

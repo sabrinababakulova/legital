@@ -1,14 +1,10 @@
 import React, {useState} from 'react'
-import langEn from "../../assets/images/engLanguage.svg"
-import langRu from "../../assets/images/ruLanguage.svg"
-import langUz from "../../assets/images/uzbLanguage.svg"
+// import langEn from "../../assets/images/engLanguage.svg"
+import langRu from "../../assets/images/ru.svg"
+import langUz from "../../assets/images/uzb.svg"
 import './Languages.sass'
 
 const languageOptions = [ 
-    {
-      id: "en",
-      flagimg: langEn
-    },
     {
       id: "ru",
       flagimg: langRu

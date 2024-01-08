@@ -12,7 +12,7 @@ const Intro = () => {
         <div className="intro-box"><IntroSlider/></div>
         <div className="intro-box">
           <div className="box-item">
-            <a href='' className="icon">
+            <a href='#about' className="icon">
               <i className='icon-arrow-down'></i>
             </a>
             <div className="item-text">

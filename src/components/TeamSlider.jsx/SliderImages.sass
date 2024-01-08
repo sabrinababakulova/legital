@@ -1,19 +1,20 @@
 @import '../../styles/global'
-.slider-wrapper 
+.slider-wrapper
   height: 400px
   .swiper-wrapper
-    column-gap: 13px
-    .swiper-slide 
+    .swiper-slide
       align-items: flex-end
-      margin-right: 0 !important
       .image
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
         width: 187px
         height: 214px
         transition: all .5s ease
-    .swiper-slide-active 
+    .swiper-slide-active
       .image
-        width: 300px
-        height: 350px
+        width: 306px
+        height: 351px
         border-bottom: 4px solid map-get($main, 'primary')
 .slider-images
   display: grid
