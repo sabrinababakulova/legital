@@ -3,4 +3,23 @@
     display: grid
     width: 100%
 
-
+.button-group
+            display: flex
+            column-gap: 12px
+            .arrow-left,
+            .arrow-right
+                width: 39px
+                height: 39px
+                border: 1px solid map-get($main, 'primary')
+                border-radius: map-get($border, 'r-50')
+                background: transparent
+                transition: all 0.5s ease
+                cursor: pointer
+                .icon-right
+                    transform: rotate(180deg)
+                i
+                    color: map-get($main, 'primary')
+                &:hover
+                    background: map-get($main, 'primary')
+                    i
+                        color: map-get($basic, 'white')
