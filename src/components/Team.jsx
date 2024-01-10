@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Team.sass'
 import TeamSlider from './TeamSlider.jsx/TeamSlider'
 import SliderImages from './TeamSlider.jsx/SliderImages'
+import MainSlider from './TeamSlider.jsx'
 
 const Team = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
@@ -27,9 +28,10 @@ const Team = () => {
           <div className="box-item">
             <div className="slider-team">
               <div className='team-slider-context'>
-                <TeamSlider activeSlideIndex={activeSlide2Index} onSlideChange={handleSlideChange} />
+                <MainSlider/>
+                {/* <TeamSlider activeSlideIndex={activeSlide2Index} onSlideChange={handleSlideChange} /> */}
               </div>
-              <SliderImages activeSlideIndex={activeSlideIndex} onSlideChange={handleSlideChange2} />
+              {/* <SliderImages activeSlideIndex={activeSlideIndex} onSlideChange={handleSlideChange2} /> */}
             </div>
           </div>
         </div>

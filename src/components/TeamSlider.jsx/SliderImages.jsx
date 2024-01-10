@@ -6,29 +6,31 @@ import  thirdSlideImg from '../../assets/images/trader-third.webp'
 import './SliderImages.sass'
 import 'swiper/css'
 
-const SliderImages = ({ activeSlideIndex, onSlideChange }) => {
+const SliderImages = ({ setCurrentIndex, activeIndex }) => {
   const swiperRef = useRef(null)
   const slides = [
     firstSlideImg,
     secondSlideImg,
     thirdSlideImg,
     firstSlideImg,
-    secondSlideImg,
-    thirdSlideImg,
   ]
+  
+
+  const onSlideChange = (e)=> {};
+  
 
   const onSwiperInit = (swiper) => {
     swiperRef.current = swiper
-    if (activeSlideIndex !== undefined) {
-      swiperRef.current.slideTo(activeSlideIndex)
-    }
+    // if (activeSlideIndex !== undefined) {
+    //   swiperRef.current.slideTo(activeSlideIndex)
+    // }
   }
 
   useEffect(() => {
-    if (swiperRef.current && activeSlideIndex !== undefined) {
-      swiperRef.current.slideTo(activeSlideIndex)
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(activeIndex);
     }
-  }, [activeSlideIndex])
+  }, [activeIndex, swiperRef])
 
   return (
     <div className="slider-wrapper slider-images">
@@ -37,8 +39,8 @@ const SliderImages = ({ activeSlideIndex, onSlideChange }) => {
         onSlideChange={onSlideChange}
         spaceBetween={13}
         slidesPerView={3}
-        loop= {true}
-        initialSlide={activeSlideIndex}
+        loop={true}
+        initialSlide={activeIndex}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>

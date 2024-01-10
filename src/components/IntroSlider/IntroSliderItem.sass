@@ -5,10 +5,19 @@
     align-items: center
     margin: 0 20px
     padding: 20px 0
+    @media screen and (max-width: 768px)
+        margin: 0
+    @media screen and (max-width: 724px)
+        flex-direction: column
+        // align-items: flex-start
     .item-heading
         text-align: start
         max-width: 402px 
         width: 100%
+        @media screen and (max-width: 724px)
+            text-align: center
+            max-width: 100%
+            margin-bottom: 20px
         .heading
             font-family: 'Onest', sans-serif
             font-weight: 500
@@ -18,10 +27,15 @@
         display: flex
         flex-direction: column
         row-gap: 26px
+        @media screen and (max-width: 724px)
+            align-items: center
         .box-text
             text-align: start
             max-width: 323px
             width: 100%
+            @media screen and (max-width: 724px)
+                text-align: center
+                max-width: 100%
             .text
                 line-height: 160%
                 +typography(map-get($basic, "black"), 16px, 400)

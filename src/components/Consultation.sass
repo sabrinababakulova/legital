@@ -4,6 +4,8 @@
     background-repeat: no-repeat
     background-size: cover
     padding: 115px 0 70px
+    @media screen and (max-width: 1023px)
+        padding: 115px 0 500px
     .consultation-box
         position: relative
         width: 100%
@@ -11,6 +13,8 @@
         border: 1px solid map-get($main,'gray-50')
         border-radius: map-get($border, 'r-3')
         background: map-get($basic, 'white')
+        @media screen and (max-width: 1023px)
+            padding-bottom: 250px
         .consultation-content
             max-width: 311px
             width: 100%
@@ -36,12 +40,24 @@
                 .text
                     line-height: 160%
                     +typography(map-get($main, 'gray-100'), 16px, 400)
-    .form-box
-        position: absolute
-        top: -71px
-        right: 68px
-        width: 530px
-        height: 100%
-        background: map-get($basic, 'white')
-        border: 1px solid map-get($main, 'gray-50')
-        border-radius: map-get($border, r-3)
+        .form-box
+            position: absolute
+            top: -71px
+            right: 68px
+            width: 100%
+            max-width: 530px
+            height: 100%
+            padding: 36px 60px
+            background: map-get($basic, 'white')
+            border: 1px solid map-get($main, 'gray-50')
+            border-radius: map-get($border, r-3)
+            @media screen and (max-width: 1170px)
+                padding: 33px 35px
+                max-width: 457px
+                right: 15px
+            @media screen and (max-width: 1023px)
+                top: 430px
+                right: 0
+                left: 0
+                margin: auto
+                height: 70%

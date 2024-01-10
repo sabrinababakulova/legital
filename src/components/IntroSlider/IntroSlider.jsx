@@ -37,8 +37,8 @@ const IntroSlider = () =>{
         modules={[Pagination]}
         className="mySwiper"
       >
-        {sliderItems.map((item) => (
-            <SwiperSlide><IntroSliderItem key={item.index} heading={item.heading} text={item.text}/></SwiperSlide>
+        {sliderItems.map((item, index) => (
+            <SwiperSlide key={index}><IntroSliderItem key={item.index} heading={item.heading} text={item.text}/></SwiperSlide>
         ))}
       </Swiper>
     </>

@@ -28,7 +28,7 @@ const ReviewsSlider = () => {
               <div className="box-stars">
                 {[...Array(5)].map((star, index) => {
                   return(
-                    <i className="icon-star-full"></i>
+                    <i key={index} className="icon-star-full"></i>
                   )
                 })}
               </div>

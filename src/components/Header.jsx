@@ -70,19 +70,43 @@ const Header = () => {
             </div>
             <div className="header-item">
                 <nav className={`nav ${burgerIsOpen ? "active-menu" : ""}`}>
-                    <div className="nav-box">
-                        {links.map((item) => (
-                            <a key={item.index} href={item.link} className="nav-link">{item.title}</a>
-                        ))}
+                    <div className="nav-container">
+                        <div className="nav-box">
+                            <a href='' className="header-logo">
+                                <div className="main-logo">
+                                    <i className='icon-main-logo'></i>
+                                </div>
+                                <div className="logo-text">
+                                    <i className='icon-logo-heading'></i>
+                                    <i className='icon-logo-text'></i>
+                                </div>
+                            </a>
+                            <div className="links">
+                            {links.map((item) => (
+                                <a key={item.index} href={item.link} className="nav-link">{item.title}</a>
+                            ))}
+                            </div>
+                        </div>
+                        <div className="icons-group">
+                            <a href='#' className="icon">
+                                <i className='icon-telegram'></i>
+                            </a>
+                            <a href='#' className="icon">
+                                <i className='icon-facebook'></i>
+                            </a>
+                            <a href='#' className="icon">
+                                <i className='icon-instagram'></i>
+                            </a>
+                        </div>
                     </div>
                 </nav>
                 <div className="header-language-switcher">
                     <Languages/>
                 </div>
-            </div>
-            <div className="burger-btn-container" onClick={()=> setBurgerIsOpen(!burgerIsOpen)}>
-                <div className={`burger-btn ${burgerIsOpen ? "active" : ""}`}>
-                    <span></span>
+                <div className="burger-btn-container" onClick={()=> setBurgerIsOpen(!burgerIsOpen)}>
+                    <div className={`burger-btn ${burgerIsOpen ? "active" : ""}`}>
+                        <span></span>
+                    </div>
                 </div>
             </div>
             </div>

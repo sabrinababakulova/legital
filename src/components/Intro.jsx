@@ -21,13 +21,13 @@ const Intro = () => {
           </div>
           <div className="box-item-image">
             <div className="item-image">
-              <img src={introFirst} alt="" />
+              <img className='image-sm' src={introFirst} alt="into-img" />
             </div>
             <div className="item-image">
-              <img src={introSecond} alt="" />
+              <img className='image-sm' src={introSecond} alt="into-img" />
             </div>
             <div className="item-image">
-              <img src={introThird} alt="" />
+              <img className='image-lg' src={introThird} alt="into-img" />
             </div>
           </div>
         </div>

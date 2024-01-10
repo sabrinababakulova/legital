@@ -60,6 +60,7 @@
                     &::after
                         transform: rotate(-45deg)
                         bottom: 3px
+        
         .tab-title--active
             .tab-icon
                 transform: rotate(180deg)
@@ -68,6 +69,8 @@
         border-radius: 3px
         border: 1px solid var(--Gray, #ABABAB)
         background: rgba(255, 255, 255, 0.80)
+        @media screen and (max-width: 576px)
+            display: none
         .content-box
             padding: 50px
             .box-icon

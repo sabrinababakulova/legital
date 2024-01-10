@@ -5,28 +5,36 @@ import 'swiper/css/navigation'
 import './TeamSlider.sass'
 import 'swiper/css'
 
-const TeamSlider = ({ onSlideChange, activeSlideIndex }) => {
+const TeamSlider = ({ setCurrentIndex, activeIndex }) => {
   const swiperRef = useRef(null)
+
+  const onSlideChange = (e)=>{
+    console.log(e.realIndex,'realindex');
+    console.log(activeIndex,'index');
+
+  setCurrentIndex(e.realIndex);
+  }  
 
   const onSwiperInit = (swiper) => {
     swiperRef.current = swiper
-    if (activeSlideIndex !== undefined) {
-      swiperRef.current.slideTo(activeSlideIndex)
-    }
+    // if (activeSlideIndex !== undefined) {
+    //   swiperRef.current.slideTo(activeSlideIndex)
+    // }
   }
 
   useEffect(() => {
-    if (swiperRef.current && activeSlideIndex !== undefined) {
-      swiperRef.current.slideTo(activeSlideIndex)
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(activeIndex)
     }
-  }, [activeSlideIndex])
+  }, [activeIndex, swiperRef])
 
   return (
     <div className="team-slider">
       <Swiper
         slidesPerView={1}
-        initialSlide={activeSlideIndex}
+        initialSlide={activeIndex}
         className="mySwiper"
+        loop= {true}
         onSlideChange={onSlideChange}
         onSwiper={onSwiperInit}
       >
@@ -39,6 +47,15 @@ const TeamSlider = ({ onSlideChange, activeSlideIndex }) => {
         <SwiperSlide>
           <TeamSliderItem name="dsff Умид sdfsdfsdfsdf 3" />
         </SwiperSlide>
+        <SwiperSlide>
+          <TeamSliderItem name="Мамадалиев Умид Юлдашевич 4" />
+        </SwiperSlide>
+        {/* <SwiperSlide>
+          <TeamSliderItem name="Мамаsdfsdfдалиев Умид dfsdffsdfsdf 5" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TeamSliderItem name="dsff Умид sdfsdfsdfsdf 6" />
+        </SwiperSlide> */}
       </Swiper>
     </div>
   )

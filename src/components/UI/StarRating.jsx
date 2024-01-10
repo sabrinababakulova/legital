@@ -9,7 +9,7 @@ const StarRating = () => {
         {[...Array(5)].map((star, index) => {
             const currentRate = index + 1
             return(
-                <div className='star-item'>
+                <div className='star-item' key={index}>
                     <label>
                         <input className='input-star' type="radio" name='rate' value={currentRate} onClick={() => setRating(currentRate)}/>
                         <i  className={`icon-star-full ${currentRate <= (rateColor || rating) ? "active" : ' '}`}></i>

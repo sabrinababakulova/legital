@@ -28,15 +28,24 @@
                 justify-content: space-between
                 align-items: center
                 padding-top: 130px
+                @media screen and (max-width: 724px)
+                    flex-wrap: wrap
+                    row-gap: 30px
+                @media screen and (max-width: 576px)
+                    padding-top: 50px
                 .item-box
                     max-width: 330px
                     width: 100%
+                    @media screen and (max-width: 576px)
+                        max-width: 100%
                 .icon-logo
                     text-decoration: none
                     display: flex
                     flex-direction: column
                     align-items: center
                     row-gap: 23px
+                    @media screen and (max-width: 576px)
+                        display: none
                     .main-logo
                         .icon-main-logo
                             font-size: 90px
@@ -54,6 +63,11 @@
                 .item-text
                     .text-primary
                         margin: 14px 0 3px 0
+                .not-desktop
+                    @media screen and (max-width: 1024px)
+                        display: none
+                    @media screen and (max-width: 724px)
+                        display: flex
             .about-content
                 padding: 60px 0 130px 0
                 .heading-line
@@ -68,6 +82,27 @@
                         width: 3px
                         height: 100%
                         background: map-get($main, "primary")
-                .item
-                    display: flex
-                    column-gap: 40px
+                .content-box
+                    @media screen and (max-width: 1024px)
+                        display: flex
+                        align-items: center
+                    .achivements-response
+                        display: none
+                        @media screen and (max-width: 1024px)
+                            display: block
+                        @media screen and (max-width: 724px)
+                            display: none
+                    .item
+                        display: flex
+                        column-gap: 40px
+                        @media screen and (max-width: 1024px)
+                            flex-wrap: wrap
+                            width: 100%
+                            column-gap: 0
+                        .why-us
+                            @media screen and (max-width:1024px)
+                                width: 50%
+                            @media screen and (max-width: 576px)
+                                width: 100%
+                
+                    

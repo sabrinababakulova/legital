@@ -2,7 +2,7 @@ import  { useState } from 'react'
 // import Header from "./components/Header";
 import Intro from './components/Intro'
 import About from './components/About'
-import Services from './components/Services'
+// import Services from './components/Services'
 import Stages from './components/Stages'
 import Team from './components/Team'
 import Reviews from './components/Reviews'
@@ -27,7 +27,7 @@ const App = () => {
             <Header />
             <Intro />
             <About />
-            <Services />
+            {/* <Services /> */}
             <Stages />
 
             <Team />

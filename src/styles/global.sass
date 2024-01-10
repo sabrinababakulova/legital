@@ -17,6 +17,20 @@ html
     overflow-x: hidden
 body
     overflow: hidden
+
+::-webkit-scrollbar 
+  width: 10px
+
+::-webkit-scrollbar-track 
+  background: map-get($basic, 'white')
+
+::-webkit-scrollbar-thumb 
+  border-radius: 6px
+  background: map-get($main, 'primary')
+  transition:  all 0.5s ease
+  &:hover 
+    background: map-get($main, 'gray-50')
+
 p,
 h1,
 h2,
@@ -32,15 +46,23 @@ h6
    max-width: 1400px
    margin: 0 auto
    padding: 0 100px
-   @media screen and (max-width: 1250px)
-    padding: 0 50px
-   @media screen and (max-width: 420px)
-    padding:  0 20px
+   @media screen and (max-width: 1024px)
+    padding: 0 90px
+   @media screen and (max-width: 840px)
+    padding:  0 50px
+   @media screen and (max-width: 576px)
+    padding:  0 40px
+   @media screen and (max-width: 320px)
+    padding: 0 20px
 
 .heading-light
     +typography( map-get($basic, "white"), 24px, 500)
+    @media screen and (max-width: 1024px)
+        font-size: 20px
 .heading-dark
     +typography(map-get($basic, "black"), 24px, 500)
+    @media screen and (max-width: 1024px)
+        font-size: 20px
 .sub-heading-white
     line-height: 160%
     +typography(map-get($basic, "white"), 16px, 400)
@@ -70,6 +92,8 @@ h6
         width: 0
     100%
         width: 77%
+        @media screen and (max-width: 1024px)
+            width: 70%
 @keyframes movedown
     0%
         opacity: 1

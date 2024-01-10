@@ -6,6 +6,7 @@
         padding: 70px 0
         display: flex
         justify-content: space-between
+        width: 100%
         &::before,
         &::after
             content: ""
@@ -58,4 +59,11 @@
                             margin-top: 11px
                             .text
                                 +typography(map-get($main, "gray-50"), 16px, 400)
-                            
+        .contacts-block,
+        .location
+            @media screen and (max-width: 1024px)
+                width: 50%
+        .location
+            .iframe
+                width: 100%
+                height: 100%

@@ -4,19 +4,33 @@
     background-image: url("../assets/images/IntroBg.webp")
     background-repeat: no-repeat
     background-size: cover 
+    @media screen and (max-width: 724px)
+        padding: 50px 0
     .intro-box
         display: flex
         justify-content: space-between
         align-items: center
         padding-bottom: 60px
+        @media screen and (max-width: 724px)
+            padding-bottom: 0
         .box-item-image
             display: flex
             column-gap: 20px
+            .image-sm
+                @media screen and (max-width: 1170px)
+                    max-width: 200px
+                    width: 100%
+            .image-lg
+                @media screen and (max-width: 1170px)
+                    max-width: 250px
+                    width: 100%
         .box-item
             display: flex
             flex-direction: column
             align-items: center
             row-gap: 25px
+            @media screen and (max-width: 1024px)
+                display: none
             .icon
                 border: 1px solid map-get($basic, 'black')
                 width: 33px

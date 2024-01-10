@@ -77,7 +77,7 @@ const About = () => {
                   <p className="sub-heading-white">Оказываем юридическую помощь в области административного, жилищного, гражданского и уголовного правываем административного, жилищного, гражданского и уголовного правываем</p>
                 </div>
               </div>
-              <div className="item">
+              <div className="item not-desktop">
                 {AchivementsItems.map((item) => (
                   <div className="achievements-items" key={item.index}>
                      <Achievements heading={item.heading} text={item.text}/>
@@ -89,12 +89,21 @@ const About = () => {
               <div className="item-heading heading-line">
                 <h3 className='heading-light'>Почему обращаются к нам</h3>
               </div>
-              <div className="item">
-                {WhyUsItems.map((item) => (
-                  <div className="why-us" key={item.index}>
-                    <WhyUsItem number={item.number} heading={item.heading} text={item.text}/>
-                  </div>
-                ))}
+              <div className="content-box">
+                <div className="item">
+                  {WhyUsItems.map((item) => (
+                    <div className="why-us" key={item.index}>
+                      <WhyUsItem number={item.number} heading={item.heading} text={item.text}/>
+                    </div>
+                  ))}
+                </div>
+                <div className="achivements-response">
+                    {AchivementsItems.map((item) => (
+                      <div className="achievements-items" key={item.index}>
+                        <Achievements heading={item.heading} text={item.text}/>
+                      </div>
+                    ))}
+                </div>
               </div>
             </div>
           </div>
