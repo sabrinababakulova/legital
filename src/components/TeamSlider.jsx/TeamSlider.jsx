@@ -7,6 +7,13 @@ import "swiper/css";
 import { Navigation } from "swiper/modules";
 
 const TeamSlider = ({ handleSwipe, mainInfo }) => {
+  const names = [
+    "Мамадалиев Умид Юлдашевич 1",
+    '"Мамаsdfsdfдалиев Умид dfsdffsdfsdf 2',
+    "dsff Умид sdfsdfsdfsdf 3",
+    '"Мамадалиев Умид Юлдашевич 4',
+  ];
+  const [currentSlide, setCurrentSlide] = useState(1);
   const swiperRef = useRef(null);
   const [isUserSwiped, setIsUserSwiped] = useState(false);
 
@@ -24,6 +31,7 @@ const TeamSlider = ({ handleSwipe, mainInfo }) => {
     if (direction) {
       handleSwipe(0, "team", direction);
     }
+    setCurrentSlide(e.realIndex + 1);
   };
 
   const onSwiperInit = (swiper) => (swiperRef.current = swiper);
@@ -50,25 +58,15 @@ const TeamSlider = ({ handleSwipe, mainInfo }) => {
         onSlideChangeTransitionStart={onSlideChange}
         onSliderMove={() => setIsUserSwiped(true)}
       >
-        <SwiperSlide>
-          <TeamSliderItem name="Мамадалиев Умид Юлдашевич 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TeamSliderItem name="Мамаsdfsdfдалиев Умид dfsdffsdfsdf 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TeamSliderItem name="dsff Умид sdfsdfsdfsdf 3" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TeamSliderItem name="Мамадалиев Умид Юлдашевич 4" />
-        </SwiperSlide>
-        {/* <SwiperSlide>
-          <TeamSliderItem name="Мамаsdfsdfдалиев Умид dfsdffsdfsdf 5" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TeamSliderItem name="dsff Умид sdfsdfsdfsdf 6" />
-        </SwiperSlide> */}
+        {names.map((name) => (
+          <SwiperSlide key={name}>
+            <TeamSliderItem name={name} />
+          </SwiperSlide>
+        ))}
       </Swiper>
+      <div id="count">
+        {currentSlide}/{names?.length}
+      </div>
       <div className="button-group">
         <button
           className="arrow-right"
